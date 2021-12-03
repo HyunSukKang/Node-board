@@ -13,7 +13,7 @@ var userSchema = mongoose.Schema({
 // virtuals
 userSchema.virtual('passwordConfirmation')
 .get(function() { return this._passwordConfirmation; })
-.set(function(value) { this._originalPassword=value; });
+.set(function(value) { this._passwordConfirmation=value; });
 
 userSchema.virtual('originalPassword')
 .get(function() { return this._originalPassword; })
